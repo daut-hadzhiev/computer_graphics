@@ -1,0 +1,9 @@
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\bin\Debug\Draw.exe
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\bin\Debug\Draw.pdb
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.csprojResolveAssemblyReference.cache
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.DoubleBufferedPanel.resources
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.MainForm.resources
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.csproj.GenerateResource.Cache
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.csproj.CoreCompileInputs.cache
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.exe
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.pdb
