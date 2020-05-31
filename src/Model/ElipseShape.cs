@@ -3,15 +3,15 @@ using System.Drawing;
 
 namespace Draw
 {
-    public class LineShape : Shape
+    public class ElipseShape : Shape
     {
         #region Constructor
 
-        public LineShape(RectangleF rect) : base(rect)
+        public ElipseShape(RectangleF rect) : base(rect)
         {
         }
 
-        public LineShape(LineShape line) : base(line)
+        public ElipseShape(ElipseShape elipse) : base(elipse)
         {
         }
 
@@ -33,13 +33,14 @@ namespace Draw
 
         public override void DrawSelf(Graphics grfx)
         {
-
             base.DrawSelf(grfx);
-            Pen pen = new Pen(Brushes.Brown);
-            pen.Width = 5.0F;
 
-            grfx.DrawLine(pen, Rectangle.X, Rectangle.Y, Rectangle.X + Rectangle.Width, Rectangle.Y + Rectangle.Height);
+            Pen pen = new Pen(Brushes.Red);
+            pen.Width = 1.5F;
 
+            grfx.FillEllipse(new SolidBrush(FillColor), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+            grfx.DrawEllipse(pen, Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+            
             // Махаме химикала, след като вече сме нарисували фигурата
             pen.Dispose();
         }

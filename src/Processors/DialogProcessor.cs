@@ -72,12 +72,30 @@ namespace Draw
             int x = rnd.Next(100, 1000);
             int y = rnd.Next(100, 600);
 
-            LineShape line = new LineShape(new Rectangle(x, y, 100, 2));
+            LineShape line = new LineShape(new Rectangle(x, y, 150, 0));
             {
                 line.FillColor = Color.Black;
             }
 
             ShapeList.Add(line);
+        }
+
+
+        /// <summary>
+        /// Добавя примитив - Елипса на произволно място върху клиентската област.
+        /// </summary>
+        public void AddRandomElipse()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ElipseShape elipse = new ElipseShape(new Rectangle(x, y, 100, 40));
+            {
+                elipse.FillColor = Color.White;
+            }
+
+            ShapeList.Add(elipse);
         }
 
         /// <summary>

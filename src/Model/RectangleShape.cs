@@ -44,10 +44,15 @@ namespace Draw
 		public override void DrawSelf(Graphics grfx)
 		{
 			base.DrawSelf(grfx);
-			
-			grfx.FillRectangle(new SolidBrush(FillColor),Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
-			grfx.DrawRectangle(Pens.Black, Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
-			
-		}
+
+            Pen pen = new Pen(Brushes.Black);
+            pen.Width = 2F;
+
+            grfx.FillRectangle(new SolidBrush(FillColor),Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+			grfx.DrawRectangle(pen, Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+
+            // Махаме химикала, след като вече сме нарисували фигурата
+            pen.Dispose();
+        }
 	}
 }

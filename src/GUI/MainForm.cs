@@ -116,5 +116,14 @@ namespace Draw
 
             viewPort.Invalidate();
         }
+
+        private void DrawElispeSpeedButtonClick(object sender, EventArgs e)
+        {
+            dialogProcessor.AddRandomElipse();
+
+            statusBar.Items[0].Text = "Последно действие: Рисуване на Елипса";
+
+            viewPort.Invalidate();
+        }
     }
 }

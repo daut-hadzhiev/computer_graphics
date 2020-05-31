@@ -40,7 +40,7 @@
             this.currentStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.speedMenu = new System.Windows.Forms.ToolStrip();
             this.Separator0 = new System.Windows.Forms.ToolStripSeparator();
-            this.Select = new System.Windows.Forms.ToolStripTextBox();
+            this.SelectLabel = new System.Windows.Forms.ToolStripTextBox();
             this.pickUpSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.Separator1 = new System.Windows.Forms.ToolStripSeparator();
             this.Draw = new System.Windows.Forms.ToolStripTextBox();
@@ -48,6 +48,7 @@
             this.drawRectangleSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.Separator2 = new System.Windows.Forms.ToolStripSeparator();
             this.viewPort = new Draw.DoubleBufferedPanel();
+            this.drawElispeSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -128,11 +129,12 @@
             this.speedMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.speedMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Separator0,
-            this.Select,
+            this.SelectLabel,
             this.pickUpSpeedButton,
             this.Separator1,
             this.Draw,
             this.DrawLineSpeedButton,
+            this.drawElispeSpeedButton,
             this.drawRectangleSpeedButton,
             this.Separator2});
             this.speedMenu.Location = new System.Drawing.Point(0, 24);
@@ -150,10 +152,10 @@
             // 
             // Select
             // 
-            this.Select.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Select.Name = "Select";
-            this.Select.Size = new System.Drawing.Size(43, 22);
-            this.Select.Text = "Select";
+            this.SelectLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectLabel.Name = "Select";
+            this.SelectLabel.Size = new System.Drawing.Size(41, 22);
+            this.SelectLabel.Text = "Select";
             // 
             // pickUpSpeedButton
             // 
@@ -175,7 +177,7 @@
             this.Draw.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Draw.Name = "Draw";
             this.Draw.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Draw.Size = new System.Drawing.Size(43, 22);
+            this.Draw.Size = new System.Drawing.Size(41, 22);
             this.Draw.Text = "Draw";
             // 
             // DrawLineSpeedButton
@@ -186,7 +188,7 @@
             this.DrawLineSpeedButton.Name = "DrawLineSpeedButton";
             this.DrawLineSpeedButton.Size = new System.Drawing.Size(43, 20);
             this.DrawLineSpeedButton.Text = "DrawLineSpeedButton";
-            this.DrawLineSpeedButton.ToolTipText = "DrawLineSpeedButton";
+            this.DrawLineSpeedButton.ToolTipText = "Draw Line";
             this.DrawLineSpeedButton.Click += new System.EventHandler(this.DrawLineSpeedButtonClick);
             // 
             // drawRectangleSpeedButton
@@ -197,6 +199,7 @@
             this.drawRectangleSpeedButton.Name = "drawRectangleSpeedButton";
             this.drawRectangleSpeedButton.Size = new System.Drawing.Size(43, 20);
             this.drawRectangleSpeedButton.Text = "DrawRectangleButton";
+            this.drawRectangleSpeedButton.ToolTipText = "Draw Rectangle";
             this.drawRectangleSpeedButton.Click += new System.EventHandler(this.DrawRectangleSpeedButtonClick);
             // 
             // Separator2
@@ -215,6 +218,17 @@
             this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
+            // 
+            // drawElispeSpeedButton
+            // 
+            this.drawElispeSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.drawElispeSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawElispeSpeedButton.Image")));
+            this.drawElispeSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.drawElispeSpeedButton.Name = "drawElispeSpeedButton";
+            this.drawElispeSpeedButton.Size = new System.Drawing.Size(43, 20);
+            this.drawElispeSpeedButton.Text = "DrawElispeButton";
+            this.drawElispeSpeedButton.ToolTipText = "Draw Elipse";
+            this.drawElispeSpeedButton.Click += new System.EventHandler(this.DrawElispeSpeedButtonClick);
             // 
             // MainForm
             // 
@@ -254,11 +268,12 @@
 		private System.Windows.Forms.ToolStrip speedMenu;
 		private System.Windows.Forms.StatusStrip statusBar;
 		private System.Windows.Forms.MenuStrip mainMenu;
-        private System.Windows.Forms.ToolStripTextBox Select;
+        private System.Windows.Forms.ToolStripTextBox SelectLabel;
         private System.Windows.Forms.ToolStripSeparator Separator1;
         private System.Windows.Forms.ToolStripTextBox Draw;
         private System.Windows.Forms.ToolStripButton DrawLineSpeedButton;
         private System.Windows.Forms.ToolStripSeparator Separator2;
         private System.Windows.Forms.ToolStripSeparator Separator0;
+        private System.Windows.Forms.ToolStripButton drawElispeSpeedButton;
     }
 }
