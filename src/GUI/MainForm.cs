@@ -97,5 +97,24 @@ namespace Draw
 		{
 			dialogProcessor.IsDragging = false;
 		}
-	}
+
+        private void speedMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
+		/// Бутон, който поставя на произволно място линия със зададените размери.
+		/// Променя се лентата със състоянието и се инвалидира контрола, в който визуализираме.
+		/// </summary>
+        private void DrawLineSpeedButtonClick(object sender, EventArgs e)
+        {
+            dialogProcessor.AddRandomLine();
+
+            statusBar.Items[0].Text = "Последно действие: Рисуване на линия";
+
+            viewPort.Invalidate();
+        }
+    }
 }

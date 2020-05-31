@@ -7,3 +7,4 @@ C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Dra
 C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.csproj.CoreCompileInputs.cache
 C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.exe
 C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.pdb
+C:\Users\dautm\Desktop\Uni\Draw Graphics\C#\Repo\computer_graphics\obj\Debug\Draw.Properties.Resources.resources
