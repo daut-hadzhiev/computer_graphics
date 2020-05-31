@@ -4,4 +4,5 @@ Backup
 
 UpgradeLog*.htm
 
-obj
+obj/
+bin/
