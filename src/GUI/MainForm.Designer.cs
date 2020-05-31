@@ -28,159 +28,217 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.mainMenu = new System.Windows.Forms.MenuStrip();
-			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.statusBar = new System.Windows.Forms.StatusStrip();
-			this.currentStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.speedMenu = new System.Windows.Forms.ToolStrip();
-			this.drawRectangleSpeedButton = new System.Windows.Forms.ToolStripButton();
-			this.pickUpSpeedButton = new System.Windows.Forms.ToolStripButton();
-			this.viewPort = new Draw.DoubleBufferedPanel();
-			this.mainMenu.SuspendLayout();
-			this.statusBar.SuspendLayout();
-			this.speedMenu.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// mainMenu
-			// 
-			this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.fileToolStripMenuItem,
-									this.editToolStripMenuItem,
-									this.imageToolStripMenuItem,
-									this.helpToolStripMenuItem});
-			this.mainMenu.Location = new System.Drawing.Point(0, 0);
-			this.mainMenu.Name = "mainMenu";
-			this.mainMenu.Size = new System.Drawing.Size(693, 24);
-			this.mainMenu.TabIndex = 1;
-			this.mainMenu.Text = "menuStrip1";
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.exitToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-			this.fileToolStripMenuItem.Text = "File";
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-			this.exitToolStripMenuItem.Text = "Exit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
-			// 
-			// editToolStripMenuItem
-			// 
-			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.editToolStripMenuItem.Text = "Edit";
-			// 
-			// imageToolStripMenuItem
-			// 
-			this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-			this.imageToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-			this.imageToolStripMenuItem.Text = "Image";
-			// 
-			// helpToolStripMenuItem
-			// 
-			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.aboutToolStripMenuItem});
-			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-			this.helpToolStripMenuItem.Text = "Help";
-			// 
-			// aboutToolStripMenuItem
-			// 
-			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-			this.aboutToolStripMenuItem.Text = "About...";
-			// 
-			// statusBar
-			// 
-			this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.currentStatusLabel});
-			this.statusBar.Location = new System.Drawing.Point(0, 401);
-			this.statusBar.Name = "statusBar";
-			this.statusBar.Size = new System.Drawing.Size(693, 22);
-			this.statusBar.TabIndex = 2;
-			this.statusBar.Text = "statusStrip1";
-			// 
-			// currentStatusLabel
-			// 
-			this.currentStatusLabel.Name = "currentStatusLabel";
-			this.currentStatusLabel.Size = new System.Drawing.Size(0, 17);
-			// 
-			// speedMenu
-			// 
-			this.speedMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.drawRectangleSpeedButton,
-									this.pickUpSpeedButton});
-			this.speedMenu.Location = new System.Drawing.Point(0, 24);
-			this.speedMenu.Name = "speedMenu";
-			this.speedMenu.Size = new System.Drawing.Size(693, 25);
-			this.speedMenu.TabIndex = 3;
-			this.speedMenu.Text = "toolStrip1";
-			// 
-			// drawRectangleSpeedButton
-			// 
-			this.drawRectangleSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.drawRectangleSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawRectangleSpeedButton.Image")));
-			this.drawRectangleSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.drawRectangleSpeedButton.Name = "drawRectangleSpeedButton";
-			this.drawRectangleSpeedButton.Size = new System.Drawing.Size(23, 22);
-			this.drawRectangleSpeedButton.Text = "DrawRectangleButton";
-			this.drawRectangleSpeedButton.Click += new System.EventHandler(this.DrawRectangleSpeedButtonClick);
-			// 
-			// pickUpSpeedButton
-			// 
-			this.pickUpSpeedButton.CheckOnClick = true;
-			this.pickUpSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.pickUpSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("pickUpSpeedButton.Image")));
-			this.pickUpSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.pickUpSpeedButton.Name = "pickUpSpeedButton";
-			this.pickUpSpeedButton.Size = new System.Drawing.Size(23, 22);
-			this.pickUpSpeedButton.Text = "toolStripButton1";
-			// 
-			// viewPort
-			// 
-			this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.viewPort.Location = new System.Drawing.Point(0, 49);
-			this.viewPort.Name = "viewPort";
-			this.viewPort.Size = new System.Drawing.Size(693, 352);
-			this.viewPort.TabIndex = 4;
-			this.viewPort.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPortPaint);
-			this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
-			this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
-			this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(693, 423);
-			this.Controls.Add(this.viewPort);
-			this.Controls.Add(this.speedMenu);
-			this.Controls.Add(this.statusBar);
-			this.Controls.Add(this.mainMenu);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MainMenuStrip = this.mainMenu;
-			this.Name = "MainForm";
-			this.Text = "Draw";
-			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.mainMenu.ResumeLayout(false);
-			this.mainMenu.PerformLayout();
-			this.statusBar.ResumeLayout(false);
-			this.statusBar.PerformLayout();
-			this.speedMenu.ResumeLayout(false);
-			this.speedMenu.PerformLayout();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.mainMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusBar = new System.Windows.Forms.StatusStrip();
+            this.currentStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.speedMenu = new System.Windows.Forms.ToolStrip();
+            this.Separator0 = new System.Windows.Forms.ToolStripSeparator();
+            this.Select = new System.Windows.Forms.ToolStripTextBox();
+            this.pickUpSpeedButton = new System.Windows.Forms.ToolStripButton();
+            this.Separator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.Draw = new System.Windows.Forms.ToolStripTextBox();
+            this.DrawLineSpeedButton = new System.Windows.Forms.ToolStripButton();
+            this.drawRectangleSpeedButton = new System.Windows.Forms.ToolStripButton();
+            this.Separator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.viewPort = new Draw.DoubleBufferedPanel();
+            this.mainMenu.SuspendLayout();
+            this.statusBar.SuspendLayout();
+            this.speedMenu.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // mainMenu
+            // 
+            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.imageToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.mainMenu.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu.Name = "mainMenu";
+            this.mainMenu.Size = new System.Drawing.Size(693, 24);
+            this.mainMenu.TabIndex = 1;
+            this.mainMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // imageToolStripMenuItem
+            // 
+            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.imageToolStripMenuItem.Text = "Image";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Text = "About...";
+            // 
+            // statusBar
+            // 
+            this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.currentStatusLabel});
+            this.statusBar.Location = new System.Drawing.Point(0, 401);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(693, 22);
+            this.statusBar.TabIndex = 2;
+            this.statusBar.Text = "statusStrip1";
+            // 
+            // currentStatusLabel
+            // 
+            this.currentStatusLabel.Name = "currentStatusLabel";
+            this.currentStatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
+            // speedMenu
+            // 
+            this.speedMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.speedMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.speedMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Separator0,
+            this.Select,
+            this.pickUpSpeedButton,
+            this.Separator1,
+            this.Draw,
+            this.DrawLineSpeedButton,
+            this.drawRectangleSpeedButton,
+            this.Separator2});
+            this.speedMenu.Location = new System.Drawing.Point(0, 24);
+            this.speedMenu.Name = "speedMenu";
+            this.speedMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.speedMenu.Size = new System.Drawing.Size(46, 377);
+            this.speedMenu.TabIndex = 3;
+            this.speedMenu.Text = "toolStrip1";
+            this.speedMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.speedMenu_ItemClicked);
+            // 
+            // Separator0
+            // 
+            this.Separator0.Name = "Separator0";
+            this.Separator0.Size = new System.Drawing.Size(43, 6);
+            // 
+            // Select
+            // 
+            this.Select.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Select.Name = "Select";
+            this.Select.Size = new System.Drawing.Size(43, 22);
+            this.Select.Text = "Select";
+            // 
+            // pickUpSpeedButton
+            // 
+            this.pickUpSpeedButton.CheckOnClick = true;
+            this.pickUpSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pickUpSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("pickUpSpeedButton.Image")));
+            this.pickUpSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pickUpSpeedButton.Name = "pickUpSpeedButton";
+            this.pickUpSpeedButton.Size = new System.Drawing.Size(43, 20);
+            this.pickUpSpeedButton.Text = "toolStripButton1";
+            // 
+            // Separator1
+            // 
+            this.Separator1.Name = "Separator1";
+            this.Separator1.Size = new System.Drawing.Size(43, 6);
+            // 
+            // Draw
+            // 
+            this.Draw.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Draw.Name = "Draw";
+            this.Draw.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Draw.Size = new System.Drawing.Size(43, 22);
+            this.Draw.Text = "Draw";
+            // 
+            // DrawLineSpeedButton
+            // 
+            this.DrawLineSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DrawLineSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("DrawLineSpeedButton.Image")));
+            this.DrawLineSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DrawLineSpeedButton.Name = "DrawLineSpeedButton";
+            this.DrawLineSpeedButton.Size = new System.Drawing.Size(43, 20);
+            this.DrawLineSpeedButton.Text = "DrawLineSpeedButton";
+            this.DrawLineSpeedButton.ToolTipText = "DrawLineSpeedButton";
+            this.DrawLineSpeedButton.Click += new System.EventHandler(this.DrawLineSpeedButtonClick);
+            // 
+            // drawRectangleSpeedButton
+            // 
+            this.drawRectangleSpeedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.drawRectangleSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawRectangleSpeedButton.Image")));
+            this.drawRectangleSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.drawRectangleSpeedButton.Name = "drawRectangleSpeedButton";
+            this.drawRectangleSpeedButton.Size = new System.Drawing.Size(43, 20);
+            this.drawRectangleSpeedButton.Text = "DrawRectangleButton";
+            this.drawRectangleSpeedButton.Click += new System.EventHandler(this.DrawRectangleSpeedButtonClick);
+            // 
+            // Separator2
+            // 
+            this.Separator2.Name = "Separator2";
+            this.Separator2.Size = new System.Drawing.Size(43, 6);
+            // 
+            // viewPort
+            // 
+            this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewPort.Location = new System.Drawing.Point(46, 24);
+            this.viewPort.Name = "viewPort";
+            this.viewPort.Size = new System.Drawing.Size(647, 377);
+            this.viewPort.TabIndex = 4;
+            this.viewPort.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPortPaint);
+            this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
+            this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
+            this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(693, 423);
+            this.Controls.Add(this.viewPort);
+            this.Controls.Add(this.speedMenu);
+            this.Controls.Add(this.statusBar);
+            this.Controls.Add(this.mainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.mainMenu;
+            this.Name = "MainForm";
+            this.Text = "Draw";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.mainMenu.ResumeLayout(false);
+            this.mainMenu.PerformLayout();
+            this.statusBar.ResumeLayout(false);
+            this.statusBar.PerformLayout();
+            this.speedMenu.ResumeLayout(false);
+            this.speedMenu.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
 		}
 		
 		private System.Windows.Forms.ToolStripStatusLabel currentStatusLabel;
@@ -196,5 +254,11 @@
 		private System.Windows.Forms.ToolStrip speedMenu;
 		private System.Windows.Forms.StatusStrip statusBar;
 		private System.Windows.Forms.MenuStrip mainMenu;
-	}
+        private System.Windows.Forms.ToolStripTextBox Select;
+        private System.Windows.Forms.ToolStripSeparator Separator1;
+        private System.Windows.Forms.ToolStripTextBox Draw;
+        private System.Windows.Forms.ToolStripButton DrawLineSpeedButton;
+        private System.Windows.Forms.ToolStripSeparator Separator2;
+        private System.Windows.Forms.ToolStripSeparator Separator0;
+    }
 }

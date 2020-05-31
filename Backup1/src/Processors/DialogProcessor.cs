@@ -62,32 +62,15 @@ namespace Draw
 
 			ShapeList.Add(rect);
 		}
-
-        /// <summary>
-		/// Добавя примитив - линия на произволно място върху клиентската област.
+		
+		/// <summary>
+		/// Проверява дали дадена точка е в елемента.
+		/// Обхожда в ред обратен на визуализацията с цел намиране на
+		/// "най-горния" елемент т.е. този който виждаме под мишката.
 		/// </summary>
-		public void AddRandomLine()
-        {
-            Random rnd = new Random();
-            int x = rnd.Next(100, 1000);
-            int y = rnd.Next(100, 600);
-
-            LineShape line = new LineShape(new Rectangle(x, y, 100, 2));
-            {
-                line.FillColor = Color.Black;
-            }
-
-            ShapeList.Add(line);
-        }
-
-        /// <summary>
-        /// Проверява дали дадена точка е в елемента.
-        /// Обхожда в ред обратен на визуализацията с цел намиране на
-        /// "най-горния" елемент т.е. този който виждаме под мишката.
-        /// </summary>
-        /// <param name="point">Указана точка</param>
-        /// <returns>Елемента на изображението, на който принадлежи дадената точка.</returns>
-        public Shape ContainsPoint(PointF point)
+		/// <param name="point">Указана точка</param>
+		/// <returns>Елемента на изображението, на който принадлежи дадената точка.</returns>
+		public Shape ContainsPoint(PointF point)
 		{
 			for(int i = ShapeList.Count - 1; i >= 0; i--){
 				if (ShapeList[i].Contains(point)){
