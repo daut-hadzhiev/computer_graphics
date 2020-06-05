@@ -125,5 +125,20 @@ namespace Draw
 
             viewPort.Invalidate();
         }
+
+        private void SelectColorButtonClick(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            dlg.ShowDialog();
+
+            statusBar.Items[0].Text = "Последно действие: Избор на цвят";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string str = null;
+                str = dlg.Color.Name;
+                MessageBox.Show(str);
+            }
+        }
     }
 }
