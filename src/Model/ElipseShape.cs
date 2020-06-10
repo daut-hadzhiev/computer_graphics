@@ -35,7 +35,7 @@ namespace Draw
         {
             base.DrawSelf(grfx);
 
-            Pen pen = new Pen(Brushes.Red);
+            Pen pen = new Pen(BorderColor);
             pen.Width = 1.5F;
 
             grfx.FillEllipse(new SolidBrush(FillColor), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);

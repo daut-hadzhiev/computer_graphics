@@ -6,7 +6,7 @@ namespace Draw
 	/// <summary>
 	/// Базовия клас на примитивите, който съдържа общите характеристики на примитивите.
 	/// </summary>
-	public abstract class Shape
+	public class Shape
 	{
 		#region Constructors
 		
@@ -69,21 +69,33 @@ namespace Draw
 		/// Цвят на елемента.
 		/// </summary>
 		private Color fillColor;		
-		public virtual Color FillColor {
+		public virtual Color FillColor
+        {
 			get { return fillColor; }
 			set { fillColor = value; }
 		}
-		
-		#endregion
-		
 
-		/// <summary>
-		/// Проверка дали точка point принадлежи на елемента.
-		/// </summary>
-		/// <param name="point">Точка</param>
-		/// <returns>Връща true, ако точката принадлежи на елемента и
-		/// false, ако не пренадлежи</returns>
-		public virtual bool Contains(PointF point)
+
+        /// <summary>
+        /// Цвят на рамката елемента.
+        /// </summary>
+        private Color borderColor;
+        public virtual Color BorderColor
+        {
+            get { return borderColor; }
+            set { borderColor = value; }
+        }
+
+        #endregion
+
+
+        /// <summary>
+        /// Проверка дали точка point принадлежи на елемента.
+        /// </summary>
+        /// <param name="point">Точка</param>
+        /// <returns>Връща true, ако точката принадлежи на елемента и
+        /// false, ако не пренадлежи</returns>
+        public virtual bool Contains(PointF point)
 		{
 			return Rectangle.Contains(point.X, point.Y);
 		}

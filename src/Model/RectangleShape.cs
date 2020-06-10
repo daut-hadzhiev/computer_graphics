@@ -45,7 +45,7 @@ namespace Draw
 		{
 			base.DrawSelf(grfx);
 
-            Pen pen = new Pen(Brushes.Black);
+            Pen pen = new Pen(BorderColor);
             pen.Width = 2F;
 
             grfx.FillRectangle(new SolidBrush(FillColor),Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);

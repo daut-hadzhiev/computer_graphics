@@ -35,7 +35,7 @@ namespace Draw
         {
 
             base.DrawSelf(grfx);
-            Pen pen = new Pen(Brushes.Brown);
+            Pen pen = new Pen(BorderColor);
             pen.Width = 5.0F;
 
             grfx.DrawLine(pen, Rectangle.X, Rectangle.Y, Rectangle.X + Rectangle.Width, Rectangle.Y + Rectangle.Height);

@@ -6,3 +6,5 @@ UpgradeLog*.htm
 
 obj/
 bin/
+
+packages/

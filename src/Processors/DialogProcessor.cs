@@ -51,14 +51,15 @@ namespace Draw
 		/// <summary>
 		/// Добавя примитив - правоъгълник на произволно място върху клиентската област.
 		/// </summary>
-		public void AddRandomRectangle()
+		public void AddRandomRectangle(Color fillColor, Color borderColor)
 		{
 			Random rnd = new Random();
 			int x = rnd.Next(100,1000);
 			int y = rnd.Next(100,600);
 			
 			RectangleShape rect = new RectangleShape(new Rectangle(x,y,100,200));
-			rect.FillColor = Color.White;
+			rect.FillColor = fillColor;
+            rect.BorderColor = borderColor;
 
 			ShapeList.Add(rect);
 		}
@@ -66,7 +67,7 @@ namespace Draw
         /// <summary>
 		/// Добавя примитив - линия на произволно място върху клиентската област.
 		/// </summary>
-		public void AddRandomLine()
+		public void AddRandomLine(Color borderColor)
         {
             Random rnd = new Random();
             int x = rnd.Next(100, 1000);
@@ -74,7 +75,8 @@ namespace Draw
 
             LineShape line = new LineShape(new Rectangle(x, y, 150, 0));
             {
-                line.FillColor = Color.Black;
+                line.FillColor = borderColor;
+                line.BorderColor = borderColor;
             }
 
             ShapeList.Add(line);
@@ -84,7 +86,7 @@ namespace Draw
         /// <summary>
         /// Добавя примитив - Елипса на произволно място върху клиентската област.
         /// </summary>
-        public void AddRandomElipse()
+        public void AddRandomElipse(Color fillColor, Color borderColor)
         {
             Random rnd = new Random();
             int x = rnd.Next(100, 1000);
@@ -92,7 +94,8 @@ namespace Draw
 
             ElipseShape elipse = new ElipseShape(new Rectangle(x, y, 100, 40));
             {
-                elipse.FillColor = Color.White;
+                elipse.FillColor = fillColor;
+                elipse.BorderColor = borderColor;
             }
 
             ShapeList.Add(elipse);
@@ -112,7 +115,7 @@ namespace Draw
 					ShapeList[i].FillColor = Color.Red;
 						
 					return ShapeList[i];
-				}	
+				}
 			}
 			return null;
 		}
