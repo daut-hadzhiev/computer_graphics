@@ -90,6 +90,16 @@ namespace Draw
             viewPort.Invalidate();
         }
 
+
+        private void AddCircleWithLines_Click(object sender, EventArgs e)
+        {
+            dialogProcessor.AddRandomCircleWithLines(this.lastSelectedFillColor, this.lastSelectedBorderColor);
+
+            statusBar.Items[0].Text = "Последно действие: Рисуване на Кръг с линии";
+
+            viewPort.Invalidate();
+        }
+
         /// <summary>
         /// Прихващане на координатите при натискането на бутон на мишката и проверка (в обратен ред) дали не е
         /// щракнато върху елемент. Ако е така то той се отбелязва като селектиран и започва процес на "влачене".
@@ -209,6 +219,10 @@ namespace Draw
                 {
                     shapeType = "elipse";
                 }
+                else if (shape is CirlceWithLines)
+                {
+                    shapeType = "circle";
+                }
 
                 list.Add($"{shapeType}|{JsonConvert.SerializeObject(shape)}");
             }
@@ -246,6 +260,12 @@ namespace Draw
                     typizedShape = new ElipseShape(currentShape.Rectangle);
                 }
 
+                else if (shapeType == "circle")
+                {
+                    typizedShape = new CirlceWithLines(currentShape.Rectangle);
+                }
+
+                // ToDo serialize Color
                 typizedShape.FillColor = this.lastSelectedFillColor;
                 typizedShape.BorderColor = this.lastSelectedBorderColor;
 
@@ -254,6 +274,20 @@ namespace Draw
 
             this.dialogProcessor.ShapeList = shapeList;            
 
+            this.viewPort.Invalidate();
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.dialogProcessor.ShapeList.Clear();
+            this.viewPort.Invalidate();
+        }
+
+        private void deleteElementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var el = this.dialogProcessor.Selection;
+
+            this.dialogProcessor.ShapeList.Remove(el);
             this.viewPort.Invalidate();
         }
     }

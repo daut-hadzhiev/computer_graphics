@@ -78,6 +78,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\GUI\Program.cs" />
+    <Compile Include="src\Model\CirlceWithLines.cs" />
     <Compile Include="src\Model\ElipseShape.cs" />
     <Compile Include="src\Model\LineShape.cs" />
     <Compile Include="src\Model\RectangleShape.cs" />

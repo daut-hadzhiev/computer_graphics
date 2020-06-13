@@ -102,6 +102,24 @@ namespace Draw
         }
 
         /// <summary>
+        /// Добавя примитив - Елипса на произволно място върху клиентската област.
+        /// </summary>
+        public void AddRandomCircleWithLines(Color fillColor, Color borderColor)
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            CirlceWithLines elipse = new CirlceWithLines(new Rectangle(x, y, 100, 100));
+            {
+                elipse.FillColor = fillColor;
+                elipse.BorderColor = borderColor;
+            }
+
+            ShapeList.Add(elipse);
+        }
+
+        /// <summary>
         /// Проверява дали дадена точка е в елемента.
         /// Обхожда в ред обратен на визуализацията с цел намиране на
         /// "най-горния" елемент т.е. този който виждаме под мишката.
